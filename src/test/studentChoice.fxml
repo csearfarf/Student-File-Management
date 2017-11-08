@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="297.0" prefWidth="466.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.StudentChoiceController">
+   <children>
+      <JFXButton fx:id="AddProfile" layoutX="105.0" layoutY="58.0" onAction="#addProfile" prefHeight="77.0" prefWidth="257.0" style="-fx-border-color: black;" text="New Student Profile">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="EditProfile" layoutX="105.0" layoutY="155.0" onAction="#editProfile" prefHeight="77.0" prefWidth="257.0" style="-fx-border-color: black;" text="Modify Student Profile">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

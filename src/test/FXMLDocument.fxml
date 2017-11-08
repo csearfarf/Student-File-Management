@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #f1f1f1;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutY="-7.0" opacity="0.95" prefHeight="489.0" prefWidth="640.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="98.0" layoutX="412.0" layoutY="96.0">
+               <image>
+                  <Image url="@icons/png/id-card-3.png" />
+               </image>
+            </ImageView>
+            <Pane layoutY="294.0" prefHeight="200.0" prefWidth="641.0" style="-fx-background-color: #31c2f2;">
+               <effect>
+                  <DropShadow color="#00000032" />
+               </effect>
+               <children>
+                  <Label layoutX="101.0" layoutY="157.0" prefHeight="17.0" prefWidth="123.0" text="Copyright by II-BCSAD" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Pane layoutX="38.0" layoutY="58.0" prefHeight="369.0" prefWidth="250.0" style="-fx-background-color: white;">
+               <children>
+                  <Pane layoutX="127.0" opacity="0.3" prefHeight="355.0" prefWidth="123.0" style="-fx-background-color: #f2f2f2;" />
+                  <ImageView fitHeight="140.0" fitWidth="250.0">
+                     <image>
+                        <Image url="@slideblue.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="username" focusColor="DEEPSKYBLUE" labelFloat="true" layoutX="37.0" layoutY="186.0" opacity="0.6" promptText="Username" unFocusColor="#33ccff">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="password" focusColor="DEEPSKYBLUE" labelFloat="true" layoutX="37.0" layoutY="258.0" opacity="0.6" promptText="Password" unFocusColor="#33ccff">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXPasswordField>
+                  <JFXButton fx:id="button" layoutX="64.0" layoutY="317.0" onAction="#handleButtonAction" onKeyPressed="#enter" prefHeight="38.0" prefWidth="123.0" style="-fx-background-color: #33ccff; -fx-background-radius: 3px;" text="Login" textFill="WHITE" />
+                  <ImageView fitHeight="98.0" fitWidth="98.0" layoutX="77.0" layoutY="61.0">
+                     <image>
+                        <Image url="@lockblue.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow color="#00000033" />
+               </effect>
+            </Pane>
+            <Label layoutX="371.0" layoutY="177.0" prefHeight="36.0" prefWidth="180.0" text="STUDENT INFORMATION" textFill="#0000007e">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutX="460.0" layoutY="-2.0" opacity="0.1" prefHeight="494.0" prefWidth="180.0" style="-fx-background-color: grey;" />
+            <Label layoutX="380.0" layoutY="207.0" prefHeight="56.0" prefWidth="162.0" text="FILE HANDLING" textFill="#0000007e">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="399.0" layoutY="234.0" prefHeight="56.0" prefWidth="123.0" text="SYSTEM" textFill="#0000007e">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4b95da" height="3.0" layoutX="325.0" layoutY="280.0" stroke="WHITE" strokeType="INSIDE" width="272.0" />
+            <Label layoutX="444.0" layoutY="195.0" prefHeight="36.0" prefWidth="34.0" text="AND" textFill="#0000007e">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

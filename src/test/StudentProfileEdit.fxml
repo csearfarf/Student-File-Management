@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" onMouseClicked="#search" onMouseDragged="#search" prefHeight="659.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.StudentProfileEditController">
+   <children>
+      <JFXButton fx:id="saveBtn" alignment="CENTER" layoutX="569.0" layoutY="314.0" onAction="#update" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #38C2EF;" text="Save Information" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tableview" layoutX="14.0" layoutY="383.0" onMouseClicked="#selectInfo" prefHeight="262.0" prefWidth="735.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <columns>
+            <TableColumn fx:id="columnStudentNumber" prefWidth="75.0" text="Student Number" />
+            <TableColumn fx:id="columnFirstname" prefWidth="75.0" text="Firstname" />
+            <TableColumn fx:id="columnLastname" prefWidth="75.0" text="Lastname" />
+            <TableColumn fx:id="columnContactNumber" prefWidth="75.0" text="Contact number" />
+            <TableColumn fx:id="columnAddress" prefWidth="75.0" text="Address" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="studNoTxtfield" focusColor="#38c2ef" labelFloat="true" layoutX="40.0" layoutY="94.0" onDragDetected="#studentNumberClear" onMouseClicked="#studentNumberClear" prefHeight="39.0" prefWidth="494.0" promptText="Student Number">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="fnameTxtfield" focusColor="#38c2ef" labelFloat="true" layoutX="40.0" layoutY="171.0" onDragDetected="#firstnameClear" onMouseClicked="#firstnameClear" promptText="Firstname">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="lnameTxtfield" focusColor="#38c2ef" labelFloat="true" layoutX="297.0" layoutY="171.0" onDragDetected="#lastnameClear" onMouseClicked="#lastnameClear" prefHeight="39.0" prefWidth="236.0" promptText="Lastname">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="contactNoTxtfield" focusColor="#38c2ef" labelFloat="true" layoutX="40.0" layoutY="247.0" onDragDetected="#contactClear" onMouseClicked="#contactClear" promptText="Contact Number">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="addressTxtfield" focusColor="#38c2ef" labelFloat="true" layoutX="297.0" layoutY="247.0" onDragDetected="#addressClear" onMouseClicked="#addressClear" prefHeight="39.0" prefWidth="236.0" promptText="Address">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXButton fx:id="deleteBt" alignment="CENTER" layoutX="371.0" layoutY="314.0" onAction="#delete" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #38C2EF;" text="Delete Account" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="searchStud" focusColor="#38c2ef" labelFloat="true" layoutX="40.0" layoutY="319.0" prefHeight="39.0" prefWidth="309.0" promptText="Search by Student Number">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <Label fx:id="id" layoutX="45.0" layoutY="22.0" text="Label" />
+      <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="65.0" prefWidth="779.0" style="-fx-background-color: #38C2EF;">
+         <children>
+            <Label layoutX="202.0" layoutY="8.0" text="EDIT STUDENT ACCOUNT" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton fx:id="saveBtn1" alignment="CENTER" layoutX="569.0" layoutY="254.0" onAction="#browseImage" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #38C2EF;" text="Change Image" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <BorderPane fx:id="borderImage" layoutX="570.0" layoutY="80.0" prefHeight="167.0" prefWidth="172.0" style="-fx-border-color: black;">
+         <center>
+            <ImageView fx:id="imageView" fitHeight="165.0" fitWidth="172.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

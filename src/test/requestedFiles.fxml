@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.RequestedFilesController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="11.0" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="748.0">
+         <children>
+            <Label alignment="CENTER" layoutX="-1.0" layoutY="-11.0" prefHeight="65.0" prefWidth="748.0" style="-fx-background-color: #38C2EF;" text="File Requests Approval" textAlignment="CENTER" textFill="#ffffff99">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tbl_request" layoutX="1.0" layoutY="66.0" onMouseClicked="#clickk" prefHeight="508.0" prefWidth="748.0" style="-fx-background-color: #f1f1f1;">
+        <columns>
+          <TableColumn fx:id="col_stnum" prefWidth="122.0" text="Student No." />
+          <TableColumn fx:id="col_firstname" prefWidth="150.0" text="First Name" />
+            <TableColumn fx:id="col_lastname" prefWidth="153.0" text="Last Name" />
+            <TableColumn fx:id="col_fileReq" prefWidth="171.0" text="File Requested" />
+            <TableColumn fx:id="col_Accept" minWidth="9.0" prefWidth="151.0" text="Accept" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="acceptButton" layoutX="32.0" layoutY="590.0" onAction="#accept" prefHeight="46.0" prefWidth="685.0" ripplerFill="#51a1d7" style="-fx-border-radius: 2px; -fx-background-color: #38C2EF;" text="Accept Request" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
